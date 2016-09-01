@@ -44,6 +44,13 @@
           <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-jdbc:8.5.4" />
           <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-juli:8.5.4" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.3.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-thymeleaf:1.4.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf-spring4:2.1.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf:2.1.5.RELEASE" />
+          <element id="library" level="project" name="Maven: ognl:ognl:3.0.8" />
+          <element id="library" level="project" name="Maven: org.unbescape:unbescape:1.1.0.RELEASE" />
+          <element id="library" level="project" name="Maven: nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:1.4.0" />
+          <element id="library" level="project" name="Maven: org.codehaus.groovy:groovy:2.4.7" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-freemarker:1.4.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.25-incubating" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.3.2.RELEASE" />
