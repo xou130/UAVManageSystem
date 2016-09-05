@@ -2,16 +2,17 @@ package com.lug.controller;
 
 import com.lug.model.User;
 import com.lug.repository.AdminRepository;
-import com.lug.repository.UserPesitory;
+import com.lug.repository.UserRepository;
+import com.lug.service.AdminService;
+import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.LinkedHashMap;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -24,13 +25,20 @@ import java.util.Map;
 public class AdminController {
 
     private AdminRepository adminRepository;
-    private UserPesitory userPesitory;
+    private UserRepository userRepository;
+    private AdminService adminService;
 
     @Autowired
-    public AdminController(AdminRepository adminRepository, UserPesitory userPesitory){
+    public AdminController(AdminRepository adminRepository,
+                           UserRepository userRepository,
+                           AdminService adminService) {
         this.adminRepository = adminRepository;
-        this.userPesitory = userPesitory;
+        this.userRepository = userRepository;
+        this.adminService = adminService;
     }
+
+    @Autowired
+
 
     /*
     管理员的主界面
@@ -41,39 +49,81 @@ public class AdminController {
         return "/admin/home";
     }
 
-    /*d
+    /*
+    管理员登陆login
+    登陆验证
+     */
+    @ResponseBody
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public Result login(HttpSession session,
+                                     HttpServletRequest request,
+                                     HttpServletResponse response) throws Exception{
+
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        System.out.print(">>>>>>username: "+username+"  password: "+password);
+
+        Result jsonRender = new Result();
+        if(!adminService.loginValidate(session, username, password)){
+            jsonRender.put("Msg", "Wrong username or password");
+            jsonRender.put("Code", 103);
+        }
+
+        return jsonRender;
+    }
+
+    /*
+    管理员登出logout
+     */
+    @ResponseBody
+    @RequestMapping(value = "/logout", method = RequestMethod.DELETE)
+    public Result logout(HttpSession session){
+        Result jsonRender = new Result();
+        if (session.getAttribute("admin") == null){
+            jsonRender.put("Code", 101);
+            jsonRender.put("Msg", "Need Auth");
+        }
+        session.removeAttribute("admin");
+        session.removeAttribute("adminId");
+        return jsonRender;
+    }
+
+//    @ResponseBody
+//    @RequestMapping(value = "/showSession", method = RequestMethod.GET)
+//    public String show(HttpSession session){
+//        return session.getAttribute("adminId").toString();
+//    }
+
+
+    /*
     查询所有的普通用户
      */
     @ResponseBody
-    @RequestMapping(value = "/userList", method = RequestMethod.GET)
-    public Map<String, Object> getUsers(){
+    @RequestMapping(value = "/show/userList", method = RequestMethod.GET)
+    public Result getUsers(){
 
-        List<User> userList = userPesitory.findAll();
+        Result jsonRender = new Result();
+        List<User> userList = adminService.getUserList();
+        jsonRender.put("Data", userList);
 
-        Map<String, Object> modelMap = new LinkedHashMap<String, Object>();
-        modelMap.put("totle",userList.size());
-        modelMap.put("data",userList);
-        modelMap.put("state","ok");
-        modelMap.put("code",100);
-
-        return modelMap;
+        return jsonRender;
     }
 
     /*
     使用用户的id进行查询用户的数据
      */
     @ResponseBody
-    @RequestMapping(value = "/showUser/{id}", method = RequestMethod.GET)
-    public Map<String, Object> showDetailOfUser(@PathVariable("id") Integer userId){
+    @RequestMapping(value = "/show/{id}", method = RequestMethod.GET)
+    public Result showDetailOfUser(@PathVariable("id") Long userId){
 
-        User user = userPesitory.findOne(userId);
+        User user = userRepository.findOne(userId);
 
-        Map<String, Object> modelMap = new LinkedHashMap<String, Object>();
-        modelMap.put("data",user);
-        modelMap.put("state","ok");
-        modelMap.put("code",100);
+        Result jsonRender = new Result();
+        jsonRender.put("Data",user);
+        jsonRender.put("Msg","ok");
+        jsonRender.put("Code",100);
 
-        return modelMap;
+        return jsonRender;
     }
 
     /*
@@ -81,35 +131,97 @@ public class AdminController {
      */
     @ResponseBody
     @RequestMapping(value = "/showUserByName/{userName}", method = RequestMethod.GET)
-    public Map<String, Object> showDetailOfUserByUserName(@PathVariable("userName") String userName){
+    public Result showDetailOfUserByUserName(@PathVariable("userName") String userName){
 
-        User user = userPesitory.findByUsername(userName);
+        User user = userRepository.findByUsername(userName);
 
-        Map<String, Object> modelMap = new LinkedHashMap<String, Object>();
+        Result jsonRender = new Result();
         if(user != null){
-            modelMap.put("data",user);
-            modelMap.put("state","ok");
-            modelMap.put("code",100);
+            jsonRender.put("Data",user);
+            jsonRender.put("Msg","ok");
+            jsonRender.put("Code",100);
         }
         else{
-            modelMap.put("state", "Can not fount "+userName);
-            modelMap.put("code", 104);
+            jsonRender.put("Msg", "Can not fount "+userName);
+            jsonRender.put("Code", 104);
         }
 
-        return modelMap;
+        return jsonRender;
+    }
+
+    /*
+    管理员直接添加新用户
+     */
+    @ResponseBody
+    @RequestMapping(value = "/save/auth", method = RequestMethod.PATCH)
+    public Result saveAuth(HttpServletRequest request){
+
+        Result jsonRender = new Result();
+
+        User user = new User();
+        user.setUsername(request.getParameter("username"));
+        user.setPassword(request.getParameter("password"));
+        if (user.getUsername()==null && user.getPassword()==null){
+            jsonRender.put("Msg", "Illegal Arguments");
+            jsonRender.put("Code", 102);
+        }
+        else{
+            if (adminService.checkUserExist(user.getUsername())){
+                jsonRender.put("Code", 103);
+                jsonRender.put("Msg", "Repeating User Name");
+            }
+            else{
+                user.setEmail(request.getParameter("email"));
+                user.setRegistDate(new Date());
+
+                try{
+                    adminService.saveUser(user);
+                }catch (Exception e){
+                    jsonRender.put("Msg", e.getStackTrace());
+                    jsonRender.put("Code", 103);
+                }
+            }
+        }
+        return jsonRender;
     }
 
 
-    @RequestMapping(value = "/add")
-    public Map<String, Object> addUser(){
+    /*
+    删除用户数据
+     */
+    @ResponseBody
+    @RequestMapping(value = "/delete/auth", method = RequestMethod.DELETE)
+    public Result deleteAuth(HttpServletRequest request){
+        Result jsonRender = new Result();
 
-        Map<String, Object> modelMap = new LinkedHashMap<String, Object>();
+        Long id = Long.parseLong(request.getParameter("id"));
+        adminService.deleteUser(id);
 
-        return modelMap;
-
+        return jsonRender;
     }
 
+    /*
+    更新用户密码
+    需要通过参入参数来实现，和post方法通过form表单传递不一样
+     */
+    @ResponseBody
+    @RequestMapping(value = "/updatePwd/auth", method = RequestMethod.PUT)
+    public Result updateAuth(HttpServletRequest request,
+                             HttpServletResponse response) throws Exception{
+        Result jsonRender = new Result();
 
+        Long id = 1L;
+        try{
+            id = Long.parseLong(request.getParameter("id"));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        String newPassword = request.getParameter("password");
+//        System.out.println(">>>>>"+id+"   password:"+newPassword);
+
+        adminService.updateUserPwd(id, newPassword);
+        return jsonRender;
+    }
 
 
 
