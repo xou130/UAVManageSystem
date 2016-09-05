@@ -1,6 +1,6 @@
 package com.lug.controller;
 
-import com.lug.repository.UserPesitory;
+import com.lug.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -19,11 +19,11 @@ import java.util.Map;
 @RequestMapping("/auth")
 public class AuthController {
 
-    private final UserPesitory userPesitory;
+    private final UserRepository userRepository;
 
     @Autowired
-    public AuthController(UserPesitory userPesitory){
-        this.userPesitory = userPesitory;
+    public AuthController(UserRepository userRepository){
+        this.userRepository = userRepository;
     }
 
     @RequestMapping(value = "/home")
@@ -50,6 +50,14 @@ public class AuthController {
 
         return map;
     }
+
+
+//    @RequestMapping(value = "/photo/upload", method = RequestMethod.POST)
+//    public Map<String, Object> photoUpload(@RequestParam("file") MultipartFile file){
+//        if(file.isEmpty()){
+//
+//        }
+//    }
 
 
 }

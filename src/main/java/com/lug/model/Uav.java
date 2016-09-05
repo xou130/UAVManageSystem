@@ -16,17 +16,19 @@ public class Uav implements Serializable {
     private Long id;
 
     private String uuid;
-    private User userByUserId;
+    private Long user_id;
+    @Column(name = "groupName")
     private String groupName;
     private String info;
+    @Column(name = "registDate")
     private Date registDate;
 
 
     public Uav(){}
 
-    public Uav(String uuid, User userByUserId, String groupName, String info, Date registDate) {
+    public Uav(String uuid, Long user_id, String groupName, String info, Date registDate) {
         this.uuid = uuid;
-        this.userByUserId = userByUserId;
+        this.user_id = user_id;
         this.groupName = groupName;
         this.info = info;
         this.registDate = registDate;
@@ -40,12 +42,20 @@ public class Uav implements Serializable {
         this.uuid = uuid;
     }
 
-    public User getUserByUserId() {
-        return userByUserId;
+    public Long getId() {
+        return id;
     }
 
-    public void setUserByUserId(User userByUserId) {
-        this.userByUserId = userByUserId;
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(Long user_id) {
+        this.user_id = user_id;
     }
 
     public String getGroupName() {
@@ -77,7 +87,7 @@ public class Uav implements Serializable {
         return "Uav{" +
                 "id=" + id +
                 ", uuid='" + uuid + '\'' +
-                ", userByUserId=" + userByUserId +
+                ", user_id=" + user_id +
                 ", groupName='" + groupName + '\'' +
                 ", info='" + info + '\'' +
                 ", registDate=" + registDate +

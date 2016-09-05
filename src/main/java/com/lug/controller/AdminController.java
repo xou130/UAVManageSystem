@@ -88,13 +88,6 @@ public class AdminController {
         return jsonRender;
     }
 
-//    @ResponseBody
-//    @RequestMapping(value = "/showSession", method = RequestMethod.GET)
-//    public String show(HttpSession session){
-//        return session.getAttribute("adminId").toString();
-//    }
-
-
     /*
     查询所有的普通用户
      */
@@ -104,6 +97,7 @@ public class AdminController {
 
         Result jsonRender = new Result();
         List<User> userList = adminService.getUserList();
+        jsonRender = jsonRender.okForList();
         jsonRender.put("Data", userList);
 
         return jsonRender;
