@@ -4,6 +4,7 @@ import com.lug.model.Uav;
 import com.lug.model.User;
 import com.lug.service.AuthService;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
+import org.hibernate.transform.ResultTransformer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpSession;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -24,7 +26,7 @@ import java.util.Map;
 @RequestMapping("/auth")
 public class AuthController {
 
-    private final AuthService authService;
+    private AuthService authService;
 
     @Autowired
     public AuthController(AuthService authService) {
@@ -167,6 +169,54 @@ public class AuthController {
     public Result addUav(HttpServletRequest request, HttpSession session){
         Result jsonRender = new Result();
 
+        String uuid = request.getParameter("uuid");
+        Long userId = (Long) session.getAttribute("authId");
+        String groupName = request.getParameter("groupName");
+        String info = request.getParameter("info");
+
+        Uav uav = new Uav(uuid,userId,groupName,info,new Date());
+        authService.addUav(uav);
         return jsonRender;
     }
+
+    /*
+    返回用户的无人列表
+     */
+    @ResponseBody
+    @RequestMapping(value = "/uavs", method = RequestMethod.GET)
+    public Result getUavList(HttpServletRequest request, HttpSession session){
+        Result jsonRender = new Result();
+
+        Long userId = (Long) session.getAttribute("authId");
+        List<Uav> uavs = authService.getUavs(userId);
+
+        if (uavs != null)
+            jsonRender.okForList();
+        else
+            jsonRender.put("Msg", "No Uav");
+
+        return jsonRender;
+    }
+
+    /*
+    删除无人机
+     */
+    @ResponseBody
+    @RequestMapping(value = "/uav/delete", method = RequestMethod.DELETE)
+    public Result delUav(HttpServletRequest request, HttpSession session){
+        Result jsonRender = new Result();
+
+        String uuid = request.getParameter("uuid");
+        Long userId = (Long) session.getAttribute("authId");
+        try{
+            authService.delUav(userId, uuid);
+        }catch (Exception e){
+            e.printStackTrace();
+            jsonRender.illegalMethod();
+        }
+
+        return jsonRender;
+    }
+
+
 }

@@ -15,7 +15,7 @@ public class Location {
     private String id;
 
     private Long uavId;
-    private Date date;
+    private Date time;
     private double latitude;
     private double longitude;
     private double height;
@@ -23,9 +23,9 @@ public class Location {
 //    @Transient
 //    private SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy");
 
-    public Location(Long uavId, Date date, double latitude, double longitude, double height){
+    public Location(Long uavId, Date time, double latitude, double longitude, double height){
         this.uavId = uavId;
-        this.date = date;
+        this.time = time;
         this.latitude = latitude;
         this.longitude = longitude;
         this.height = height;
@@ -51,11 +51,11 @@ public class Location {
     }
 
     public Date getDate() {
-        return date;
+        return time;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDate(Date time) {
+        this.time = time;
     }
 
     public double getLatitude() {

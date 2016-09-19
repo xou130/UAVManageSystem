@@ -31,4 +31,5 @@ public interface UavRepository extends JpaRepository<Uav, Long> {
     @Query("update Uav u set u.groupName=:qGroupName, u.info=:qInfo where u.uuid=:qUuid")
     int updateDataByUuid(@Param("qUuid") String uuid,
                          @Param("qGroupName") String groupName, @Param("qInfo") String info);
+
 }

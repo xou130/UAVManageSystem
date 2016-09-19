@@ -25,21 +25,12 @@ import java.util.Map;
 @RequestMapping("/admin")
 public class AdminController {
 
-    private AdminRepository adminRepository;
-    private UserRepository userRepository;
     private AdminService adminService;
 
     @Autowired
-    public AdminController(AdminRepository adminRepository,
-                           UserRepository userRepository,
-                           AdminService adminService) {
-        this.adminRepository = adminRepository;
-        this.userRepository = userRepository;
+    public AdminController(AdminService adminService) {
         this.adminService = adminService;
     }
-
-    @Autowired
-
 
     /*
     管理员的主界面
@@ -111,12 +102,10 @@ public class AdminController {
     @RequestMapping(value = "/show/{id}", method = RequestMethod.GET)
     public Result showDetailOfUser(@PathVariable("id") Long userId){
 
-        User user = userRepository.findOne(userId);
+        User user = adminService.getUserByUserId(userId);
 
         Result jsonRender = new Result();
         jsonRender.put("Data",user);
-        jsonRender.put("Msg","ok");
-        jsonRender.put("Code",100);
 
         return jsonRender;
     }
@@ -128,13 +117,11 @@ public class AdminController {
     @RequestMapping(value = "/showUserByName/{userName}", method = RequestMethod.GET)
     public Result showDetailOfUserByUserName(@PathVariable("userName") String userName){
 
-        User user = userRepository.findByUsername(userName);
+        User user = adminService.getUserByUsername(userName);
 
         Result jsonRender = new Result();
         if(user != null){
             jsonRender.put("Data",user);
-            jsonRender.put("Msg","ok");
-            jsonRender.put("Code",100);
         }
         else{
             jsonRender.put("Msg", "Can not fount "+userName);

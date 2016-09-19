@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -32,15 +33,20 @@ public class UavService {
     }
 
     @Transactional
-    public boolean addLocation(Location location){
+    public boolean addLocation(String uuid, double latitude, double longitude, double height){
         try{
-            locationRepository.save(location);
-            return true;
+            Uav uav = uavRepository.findByUuid(uuid);
+            if (uav != null){
+                Location location = new Location(uav.getId(), new Date(), latitude, longitude, height);
+                locationRepository.save(location);
+                return true;
+            }
         }catch(Exception e){
             e.printStackTrace();
-            return false;
         }
+        return false;
     }
+
 
     public Uav getUavDetail(String uuid){
         Uav uav = uavRepository.findByUuid(uuid);
@@ -51,6 +57,13 @@ public class UavService {
         Uav uav = uavRepository.findByUuid(uuid);
         return uav.getUser_id();
     }
+
+    public void delUav(Long userId, String uuid){
+        Uav uav = uavRepository.findByUuid(uuid);
+        uavRepository.delete(uav);
+    }
+
+
 
 
 }

@@ -97,6 +97,10 @@ public class AuthService {
         userRepository.updateUserPwd((Long) session.getAttribute("authId"), newPwd);
     }
 
-
+    @Transactional
+    public void delUav(Long userId, String uuid) throws Exception{
+        Uav uav = uavRepository.findByUuid(uuid);
+        uavRepository.delete(uav);
+    }
 
 }

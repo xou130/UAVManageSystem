@@ -28,10 +28,10 @@ public class User implements Serializable {
 
     private String email;
 
-    @Column(name = "groupName")
+//    @Column(name = "groupName")
     private String groupName;
 
-    @Column(name = "registDate")
+//    @Column(name = "registDate")
     private Date registDate;
 
     private int confirm;

@@ -74,4 +74,12 @@ public class AdminService {
 //        userRepository.
 //    }
 
+    public User getUserByUserId(Long userId){
+        return userRepository.findOne(userId);
+    }
+
+    public User getUserByUsername(String username){
+        return userRepository.findByUsername(username);
+    }
+
 }
