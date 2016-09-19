@@ -15,5 +15,30 @@ public class Result extends HashMap<String, Object> {
         put("Code", 200);
         return this;
     }
+
+    public Result argError(){
+        put("Code", 102);
+        put("Msg", "Illegal Arguments");
+        return this;
+    }
+
+    public Result passError(){
+        put("Code","103");
+        put("Msg","User or Password Error");
+        return this;
+    }
+
+    public Result illegalMethod(){
+        put("Code", 102);
+        put("Msg", "Illegal Action Parameters");
+        return this;
+    }
+
+    public Result needAuth(){
+        put("Code", 101);
+        put("Msg", "Need Auth");
+        return this;
+    }
+
 }
 

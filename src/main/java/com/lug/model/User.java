@@ -34,12 +34,14 @@ public class User implements Serializable {
     @Column(name = "registDate")
     private Date registDate;
 
+    private int confirm;
 
 
     public User() {
     }
 
-    public User(String username, String password, String phone, String address, String email, String groupName, Date registDate) {
+    public User(String username, String password, String phone, String address,
+                String email, String groupName, Date registDate) {
         this.username = username;
         this.password = password;
         this.phone = phone;
@@ -47,6 +49,15 @@ public class User implements Serializable {
         this.email = email;
         this.groupName = groupName;
         this.registDate = registDate;
+        this.confirm = 0;
+    }
+
+    public int getConfirm() {
+        return confirm;
+    }
+
+    public void setConfirm(int confirm) {
+        this.confirm = confirm;
     }
 
     public Date getRegistDate() {

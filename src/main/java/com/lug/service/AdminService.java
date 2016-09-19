@@ -70,4 +70,8 @@ public class AdminService {
         }
     }
 
+//    public void authRegConfirm(String userId){
+//        userRepository.
+//    }
+
 }

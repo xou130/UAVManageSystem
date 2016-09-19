@@ -1,6 +1,9 @@
 package com.lug.controller;
 
-import com.lug.repository.UserRepository;
+import com.lug.model.Uav;
+import com.lug.model.User;
+import com.lug.service.AuthService;
+import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -8,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpSession;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,12 +24,14 @@ import java.util.Map;
 @RequestMapping("/auth")
 public class AuthController {
 
-    private final UserRepository userRepository;
+    private final AuthService authService;
 
     @Autowired
-    public AuthController(UserRepository userRepository){
-        this.userRepository = userRepository;
+    public AuthController(AuthService authService) {
+        this.authService = authService;
     }
+
+
 
     @RequestMapping(value = "/home")
     public String userHome(Map<String,Object> map){
@@ -51,13 +58,115 @@ public class AuthController {
         return map;
     }
 
+    //用户注册
+    @ResponseBody
+    @RequestMapping(value = "/registe", method = RequestMethod.POST)
+    public Result registe(HttpServletRequest request, HttpSession session){
+        Result jsonRender = new Result();
 
-//    @RequestMapping(value = "/photo/upload", method = RequestMethod.POST)
-//    public Map<String, Object> photoUpload(@RequestParam("file") MultipartFile file){
-//        if(file.isEmpty()){
-//
-//        }
-//    }
+        String regUsername = request.getParameter("username");
+        String regPassword = request.getParameter("password");
+        String regEmail = request.getParameter("email");
+        String regPhone = request.getParameter("phone");
+
+        User user = new User(regUsername, regPassword, regPhone, null, regEmail, null, new Date());
+        try{
+            authService.registe(session,user);
+        }catch (Exception e){
+            e.printStackTrace();
+            jsonRender.argError();
+        }
+
+        return jsonRender;
+    }
 
 
+    /*
+    登录
+     */
+    @ResponseBody
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public Result authLogin(HttpServletRequest request, HttpSession session){
+        Result jsonRender = new Result();
+
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+        if ( !authService.loginValidate(session, username, password) ){
+            jsonRender.passError();
+        }
+
+        return jsonRender;
+    }
+
+    /*
+    登出
+     */
+    @ResponseBody
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public Result authLogout(HttpServletRequest request, HttpSession session){
+        Result jsonRender = new Result();
+
+        if (session.getAttribute("auth") == null){
+            jsonRender.needAuth();
+        }
+        else{
+            session.removeAttribute("auth");
+            session.removeAttribute("authId");
+        }
+
+        return jsonRender;
+    }
+
+    /*
+    修改个人信息，需要添加验证数据类型和长度等的代码
+     */
+    @ResponseBody
+    @RequestMapping(value = "/update/detail", method = RequestMethod.POST)
+    public Result authUpdate(HttpServletRequest request, HttpSession session){
+        Result jsonRender = new Result();
+
+        User user = (User) session.getAttribute("auth");
+        user.setGroupName(request.getParameter("groupName"));
+        user.setAddress(request.getParameter("address"));
+        user.setEmail(request.getParameter("email"));
+        user.setPhone(request.getParameter("phone"));
+
+        authService.updateAuth(user);
+        session.setAttribute("auth", user);
+        return jsonRender;
+    }
+
+    /*
+    用户修改密码
+     */
+    @ResponseBody
+    @RequestMapping(value = "/update/password", method = RequestMethod.PUT)
+    public Result authUpdatePwd(HttpServletRequest request, HttpSession session){
+        Result jsonRender = new Result();
+
+        User user = (User) session.getAttribute("auth");
+        String oldPwd = request.getParameter("oldPassword");
+        if (oldPwd.equals(user.getPassword())){
+            String newPwd = request.getParameter("newPassword");
+            authService.updatePwd(session, newPwd);
+        }
+        else{
+            jsonRender.passError();
+            jsonRender.put("Msg", "Old password error!");
+        }
+
+        return jsonRender;
+    }
+
+    /*
+    添加无人机
+     */
+    @ResponseBody
+    @RequestMapping(value = "/uav/add", method = RequestMethod.POST)
+    public Result addUav(HttpServletRequest request, HttpSession session){
+        Result jsonRender = new Result();
+
+        return jsonRender;
+    }
 }

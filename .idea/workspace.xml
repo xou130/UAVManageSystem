@@ -1,152 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5240a46-1a49-44b3-9409-1e13f366a326" name="Default" comment="Complete the user data management module, and find out the way the write update interface for repository&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_3_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_3_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_3_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_mongodb_1_4_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_1_9_2_RELEASE.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/lug/service/Test.class" afterPath="" />
+    <list default="true" id="d5240a46-1a49-44b3-9409-1e13f366a326" name="Default" comment="Recover the user controller ing....&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lug/model/Location.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lug/repository/LocationRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lug/repository/UavRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lug/service/AuthService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lug/service/UavService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/lug/controller/AdminController.class" afterPath="$PROJECT_DIR$/target/classes/com/lug/controller/AdminController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/lug/controller/AuthController.class" afterPath="$PROJECT_DIR$/target/classes/com/lug/controller/AuthController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/lug/controller/MainController.class" afterPath="$PROJECT_DIR$/target/classes/com/lug/controller/MainController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/lug/controller/UavController.class" afterPath="$PROJECT_DIR$/target/classes/com/lug/controller/UavController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/lug/model/Uav.class" afterPath="$PROJECT_DIR$/target/classes/com/lug/model/Uav.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/lug/model/User.class" afterPath="$PROJECT_DIR$/target/classes/com/lug/model/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/UAVManageSystem_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/UAVManageSystem_war.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/UAVManageSystem_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/UAVManageSystem_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_7.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_7.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_39.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_39.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__nz_net_ultraq_thymeleaf_thymeleaf_layout_dialect_1_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__nz_net_ultraq_thymeleaf_thymeleaf_layout_dialect_1_4_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ognl_ognl_3_0_8.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ognl_ognl_3_0_8.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_4.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_4.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_4.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_8_5_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_8_5_4.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_5_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_5_4.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_9.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_2_5_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_2_5_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_2_4_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_2_4_7.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_0_9_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_0_9_Final.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_0_9_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_0_9_Final.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_4_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_4_Final.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_0_Final.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20140107.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20140107.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_3_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_21.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_21.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_21.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_21.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_21.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_21.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_21.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_21.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_4_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_4_0_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_4_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_4_0_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_1_4_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_1_4_0_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_4_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_4_0_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_1_4_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_1_4_0_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_1_4_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_1_4_0_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_4_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_4_0_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_4_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_4_0_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_4_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_4_0_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_1_4_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_1_4_0_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_4_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_4_0_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_4_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_4_0_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_4_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_4_0_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_4_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_4_0_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_12_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_12_2_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_10_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_10_2_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_2_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_2_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_2_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_2_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_2_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_2_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_2_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_3_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_3_2_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_2_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_2_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_2_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_2_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_2_1_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_2_1_5_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring4_2_1_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring4_2_1_5_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_0_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/lug/repository/BlogRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/lug/repository/BlogRepository.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UAVManageSystem.iml" afterPath="$PROJECT_DIR$/UAVManageSystem.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvnw" afterPath="$PROJECT_DIR$/mvnw" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvnw.cmd" afterPath="$PROJECT_DIR$/mvnw.cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/style.css" afterPath="$PROJECT_DIR$/target/classes/static/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/admin/home.html" afterPath="$PROJECT_DIR$/target/classes/templates/admin/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/home.html" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" />
-    </list>
-    <list id="2d50f423-c02a-4772-98b9-df69e6a89936" name="Rejected commit: Default" comment="Complete the user data management module, and find out the way the write update interface for repository&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lug/controller/UavController.java" afterPath="$PROJECT_DIR$/src/main/java/com/lug/controller/UavController.java" />
-    </list>
-    <list id="8deae7ff-7fc0-42e0-8668-89b18f922ec4" name="Rejected commit: Default (2)" comment="Complete the user data management module, and find out the way the write update interface for repository&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lug/model/Location.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lug/repository/LocationRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lug/repository/UavRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lug/service/AuthService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lug/service/UavService.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lug/service/Test.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lug/UavManageSystemApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/lug/UavManageSystemApplication.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lug/controller/AdminController.java" afterPath="$PROJECT_DIR$/src/main/java/com/lug/controller/AdminController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lug/controller/AuthController.java" afterPath="$PROJECT_DIR$/src/main/java/com/lug/controller/AuthController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lug/controller/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/com/lug/controller/MainController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lug/controller/Result.java" afterPath="$PROJECT_DIR$/src/main/java/com/lug/controller/Result.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lug/model/Admin.java" afterPath="$PROJECT_DIR$/src/main/java/com/lug/model/Admin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lug/model/Article.java" afterPath="$PROJECT_DIR$/src/main/java/com/lug/model/Article.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lug/model/Uav.java" afterPath="$PROJECT_DIR$/src/main/java/com/lug/model/Uav.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lug/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/lug/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lug/repository/AdminRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/lug/repository/AdminRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lug/service/AdminService.java" afterPath="$PROJECT_DIR$/src/main/java/com/lug/service/AdminService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
+    </list>
+    <list id="2d50f423-c02a-4772-98b9-df69e6a89936" name="Rejected commit: Default" comment="Complete the user data management module, and find out the way the write update interface for repository&#10;" />
+    <list id="8deae7ff-7fc0-42e0-8668-89b18f922ec4" name="Rejected commit: Default (2)" comment="Complete the user data management module, and find out the way the write update interface for repository&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lug/model/Uav.java" afterPath="$PROJECT_DIR$/src/main/java/com/lug/model/Uav.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lug/repository/BlogRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/lug/repository/BlogRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lug/repository/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/lug/repository/UserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lug/service/AdminService.java" afterPath="$PROJECT_DIR$/src/main/java/com/lug/service/AdminService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/style.css" afterPath="$PROJECT_DIR$/src/main/resources/static/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/home.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/lug/UavManageSystemApplicationTests.java" afterPath="$PROJECT_DIR$/src/test/java/com/lug/UavManageSystemApplicationTests.java" />
     </list>
-    <list id="170c04a2-444c-4a3d-b4d8-0e7a30e4ff5b" name="Failed commit: Rejected commit: Default (2)" comment="&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" />
-    </list>
+    <list id="170c04a2-444c-4a3d-b4d8-0e7a30e4ff5b" name="Failed commit: Rejected commit: Default (2)" comment="&#10;" />
     <ignored path="UAVManageSystem.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <file path="$PROJECT_DIR$/src/main/java/com/lug/repository/UserRepository.java" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,21 +51,114 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UavController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/controller/UavController.java">
+      <file leaf-file-name="AuthController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/controller/AuthController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+            <state relative-caret-position="103">
+              <caret line="141" column="3" selection-start-line="141" selection-start-column="3" selection-end-line="141" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#910#911#0" expanded="true" />
+                <element signature="e#956#957#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/service/AuthService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="845">
+              <caret line="96" column="42" selection-start-line="96" selection-start-column="42" selection-end-line="96" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/com/sun/org/apache/xpath/internal/operations/String.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.html">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/model/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+            <state relative-caret-position="504">
+              <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+              <folding>
+                <element signature="e#1156#1157#0" expanded="true" />
+                <element signature="e#1186#1187#0" expanded="true" />
+                <element signature="e#1229#1230#0" expanded="true" />
+                <element signature="e#1267#1268#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UavRepository.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/repository/UavRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/service/AdminService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/repository/UserRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/String.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Result.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/controller/Result.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UavService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/service/UavService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="580">
+              <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -225,21 +207,21 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lug/service/adminService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lug/model/Admin.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lug/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lug/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lug/repository/LocationRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lug/service/AdminService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lug/model/Uav.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lug/repository/UavRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/lug/model/Location.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lug/controller/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lug/service/AuthService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lug/controller/AuthController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lug/service/UavService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lug/controller/Result.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lug/controller/AdminController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lug/controller/UavController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lug/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lug/service/AdminService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lug/controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lug/service/AuthService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lug/repository/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lug/controller/Result.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lug/controller/AuthController.java" />
       </list>
     </option>
   </component>
@@ -363,6 +345,130 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lug" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UAVManageSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UAVManageSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lug" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UAVManageSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UAVManageSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lug" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repository" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UAVManageSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UAVManageSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lug" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UAVManageSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UAVManageSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lug" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -869,6 +975,7 @@
       <workItem from="1474197758747" duration="799000" />
       <workItem from="1474198663082" duration="134000" />
       <workItem from="1474198875332" duration="670000" />
+      <workItem from="1474254286638" duration="5834000" />
     </task>
     <task id="LOCAL-00001" summary="Change thymeleaf templates to freemarker, and delete uav class">
       <created>1472743650786</created>
@@ -923,7 +1030,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123224000" />
+    <option name="totallyTimeSpent" value="129058000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -940,19 +1047,19 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45356038" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30941704" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3262295" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20204978" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26742426" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1034,7 +1141,8 @@
     <MESSAGE value="Use thymeleaf and freemarker at the same project&#10;" />
     <MESSAGE value="Adding some admin api and redefine model and repesitory interface.&#10;" />
     <MESSAGE value="Complete the user data management module, and find out the way the write update interface for repository&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete the user data management module, and find out the way the write update interface for repository&#10;" />
+    <MESSAGE value="Recover the user controller ing....&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Recover the user controller ing....&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1047,8 +1155,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.2.RELEASE/spring-webmvc-4.3.2.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.2.RELEASE/spring-webmvc-4.3.2.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.2.RELEASE/spring-webmvc-4.3.2.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.2.RELEASE/spring-web-4.3.2.RELEASE.jar!/org/springframework/web/filter/RequestContextFilter.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.2.RELEASE/spring-web-4.3.2.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class" />
@@ -1103,14 +1209,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/GeneratedValue.class" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/repository/AdminRepository.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1119,89 +1217,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/model/Uav.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/repository/UavRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/repository/LocationRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/java/jdk1.8.0_60/src.zip!/java/util/Date.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/model/Location.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="25" column="77" selection-start-line="25" selection-start-column="77" selection-end-line="25" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.2.RELEASE/spring-context-4.3.2.RELEASE.jar!/org/springframework/context/support/AbstractRefreshableApplicationContext.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.2.RELEASE/spring-context-4.3.2.RELEASE.jar!/org/springframework/context/support/AbstractRefreshableConfigApplicationContext.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.2.RELEASE/spring-context-4.3.2.RELEASE.jar!/org/springframework/context/support/AbstractXmlApplicationContext.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.2.RELEASE/spring-context-4.3.2.RELEASE.jar!/org/springframework/context/support/ClassPathXmlApplicationContext.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/service/UavService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/controller/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Makefile" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/service/AdminService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/controller/AuthController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="206" column="6" selection-start-line="205" selection-start-column="0" selection-end-line="206" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1476">
@@ -1210,36 +1231,156 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/controller/AdminController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2070">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        <state relative-caret-position="216">
+          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="52" column="7" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/model/Uav.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/service/AuthService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/model/Location.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="79" selection-end-column="5" />
+        <state relative-caret-position="378">
+          <caret line="25" column="77" selection-start-line="25" selection-start-column="77" selection-end-line="25" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/repository/LocationRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/controller/UavController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+        <state relative-caret-position="216">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/controller/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+        <state relative-caret-position="355">
+          <caret line="231" column="0" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/service/AdminService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+          <folding>
+            <element signature="e#1156#1157#0" expanded="true" />
+            <element signature="e#1186#1187#0" expanded="true" />
+            <element signature="e#1229#1230#0" expanded="true" />
+            <element signature="e#1267#1268#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/service/UavService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/com/sun/org/apache/xpath/internal/operations/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/service/AuthService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="845">
+          <caret line="96" column="42" selection-start-line="96" selection-start-column="42" selection-end-line="96" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/controller/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/controller/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="141" column="3" selection-start-line="141" selection-start-column="3" selection-end-line="141" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#956#957#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lug/repository/UavRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
           <folding />
         </state>
       </provider>

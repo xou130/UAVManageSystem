@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.Date;
@@ -182,6 +183,7 @@ public class AdminController {
 
     /*
     删除用户数据
+    主要是使用在有不正当申请的用户时
      */
     @ResponseBody
     @RequestMapping(value = "/delete/auth", method = RequestMethod.DELETE)
@@ -214,6 +216,20 @@ public class AdminController {
 //        System.out.println(">>>>>"+id+"   password:"+newPassword);
 
         adminService.updateUserPwd(id, newPassword);
+        return jsonRender;
+    }
+
+
+    /*
+    可能需要做一个用于存储验证信息的功能
+     */
+    @ResponseBody
+    @RequestMapping(value = "/confirm/auth", method = RequestMethod.PUT)
+    public Result confirmAuth(HttpServletRequest request, HttpSession session){
+        Result jsonRender = new Result();
+
+        String userId = request.getParameter("userId");
+
         return jsonRender;
     }
 
