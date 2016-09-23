@@ -29,7 +29,7 @@ public class Result extends HashMap<String, Object> {
     }
 
     public Result illegalMethod(){
-        put("Code", 102);
+        put("Code", 104);
         put("Msg", "Illegal Action Parameters");
         return this;
     }
